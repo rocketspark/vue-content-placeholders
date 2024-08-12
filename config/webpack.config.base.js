@@ -1,19 +1,14 @@
-var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const {DefinePlugin} = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
-var outputFile = 'vue-content-placeholders'
-var config = require('../package.json')
+const outputFile = 'vue-content-placeholders'
+const config = require('../package.json')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-      },
       {
         test: /.js$/,
         use: 'babel-loader',
@@ -23,18 +18,24 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            css: ExtractTextPlugin.extract('css-loader'),
-            sass: ExtractTextPlugin.extract('css-loader!sass-loader'),
-            scss: ExtractTextPlugin.extract('css-loader!sass-loader'),
+            css: MiniCssExtractPlugin.loader,
+            sass: MiniCssExtractPlugin.loader,
+            scss: MiniCssExtractPlugin.loader,
           },
         },
       },
     ],
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'VERSION': JSON.stringify(config.version),
+    new DefinePlugin({
+      VERSION: JSON.stringify(config.version),
     }),
-    new ExtractTextPlugin(outputFile + '.css'),
+    new MiniCssExtractPlugin({
+      filename: outputFile + '.css',
+    }),
+    new ESLintPlugin(),
   ],
+  resolve: {
+    extensions: ['.js', '.ts', '.vue'], // Add your extensions here.
+  },
 }

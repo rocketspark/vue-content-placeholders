@@ -1,2 +1,19 @@
 node_modules/
 dist/
+
+
+####PHPSTORM FILE######
+/.idea/dictionaries/*
+/.idea/shelf/*
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/usage.statistics.xml
+/.idea/dataSources.local.xml
+/.idea/dataSources/*
+/.idea/modules.xml
+/.idea/rocketspark-cms 2.iml
+/.idea/aws.xml
+/.idea/codestream.xml
+/.idea/copilot/*
+/.idea/tbe-PST.xml
+/.idea/jsLibraryMappings.xml

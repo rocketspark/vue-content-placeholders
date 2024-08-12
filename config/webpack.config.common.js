@@ -1,9 +1,9 @@
-var webpack = require('webpack')
-var merge = require('webpack-merge')
-var base = require('./webpack.config.base')
-var path = require('path')
+const webpack = require('webpack')
+const { merge } = require('webpack-merge')
+const base = require('./webpack.config.base')
+const path = require('path')
 
-var outputFile = 'vue-content-placeholders'
+const outputFile = 'vue-content-placeholders'
 
 module.exports = merge(base, {
   output: {
