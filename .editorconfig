@@ -6,16 +6,10 @@ insert_final_newline = false
 indent_style = space
 indent_size = 4
 
-[{.babelrc,.stylelintrc,.eslintrc,jest.config,*.json,*.jsb3,*.jsb2,*.bowerrc}]
-indent_size = 2
-
-[{jshint.json,*.jshintrc}]
+[{.babelrc,.stylelintrc,.eslintrc,*.json}]
 indent_size = 2
 
 [*.js.map]
-indent_size = 2
-
-[{*.cjsx,*.coffee}]
 indent_size = 2
 
 [{*.yml,*.yaml,*.config}]
