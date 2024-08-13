@@ -4,36 +4,34 @@
     </div>
 </template>
 
-<script lang="ts">
-export default {
-    name: 'content-placeholders',
-    computed: {
-        classObject() {
-            return {
-                'vue-content-placeholders': true,
-                'vue-content-placeholders-is-rounded': this.rounded,
-                'vue-content-placeholders-is-centered': this.centered,
-                'vue-content-placeholders-is-animated': this.animated,
-            }
-        },
+<script lang="ts" setup>
+import { computed } from "vue";
+
+const props = defineProps({
+    rounded: {
+        type: Boolean,
+        default: false,
     },
-    props: {
-        rounded: {
-            type: Boolean,
-            default: false,
-        },
-        centered: {
-            type: Boolean,
-            default: false,
-        },
-        animated: {
-            type: Boolean,
-            default: true,
-        },
+    centered: {
+        type: Boolean,
+        default: false,
     },
-}
+    animated: {
+        type: Boolean,
+        default: true,
+    },
+})
+
+const classObject = computed(() => {
+    return {
+        'vue-content-placeholders': true,
+        'vue-content-placeholders-is-rounded': props.rounded,
+        'vue-content-placeholders-is-centered': props.centered,
+        'vue-content-placeholders-is-animated': props.animated,
+    }
+})
 </script>
 
 <style lang="scss">
-@import '../styles.css';
+@import '../styles.scss';
 </style>
