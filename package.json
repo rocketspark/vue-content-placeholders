@@ -1,6 +1,6 @@
 {
   "name": "@rocketspark/vue-content-placeholders",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "dist/vue-content-placeholders.umd.js",
   "module": "dist/vue-content-placeholders.es.js",
   "type": "module",
