@@ -4,19 +4,12 @@
     </div>
 </template>
 
-<script lang="ts">
-export default {
-    name: 'content-placeholders-text',
-    data() {
-        return {
-            className: 'vue-content-placeholders-text',
-        }
+<script lang="ts" setup>
+const className = 'vue-content-placeholders-text';
+defineProps({
+    lines: {
+        type: Number,
+        default: 4,
     },
-    props: {
-        lines: {
-            type: Number,
-            default: 4,
-        },
-    },
-}
+});
 </script>
