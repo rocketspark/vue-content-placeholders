@@ -25,12 +25,11 @@ import VueContentPlaceholderPlugin from '@rocketspark/vue-content-placeholders'
 Vue.use(VueContentPlaceholders)
 ```
 
-> ⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.
+> ⚠️ A css file is included when importing the package. You may have to set up your bundler to embed the css in your page.
 
 ### Examples:
 
 ```html
-
 <content-placeholders>
     <content-placeholders-heading :img="true"/>
     <content-placeholders-text :lines="3"/>
@@ -40,7 +39,6 @@ Vue.use(VueContentPlaceholders)
 ![rendered example](https://i.imgur.com/LWfqxUe.png)
 
 ```html
-
 <content-placeholders :rounded="true">
     <content-placeholders-img/>
     <content-placeholders-heading/>
