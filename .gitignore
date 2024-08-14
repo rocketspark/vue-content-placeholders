@@ -28,3 +28,7 @@ dist-ssr
 /.idea/tbe-PST.xml
 /.idea/jsLibraryMappings.xml
 .DS_Store
+
+/src/main.ts
+/src/App.vue
+index.html
