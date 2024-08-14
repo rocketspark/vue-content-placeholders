@@ -1,9 +1,8 @@
 {
-  "name": "vue-content-placeholders",
-  "private": true,
-  "version": "0.0.1",
-  "main": "./dist/vue-content-placeholders.umd.js",
-  "module": "./dist/vue-content-placeholders.es.js",
+  "name": "@rocketspark/vue-content-placeholders",
+  "version": "0.0.0",
+  "main": "dist/vue-content-placeholders.umd.js",
+  "module": "dist/vue-content-placeholders.es.js",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -32,6 +31,6 @@
     "vue-tsc": "^2.0.29"
   },
   "peerDependencies": {
-    "vue": "3.*"
+    "vue": "3.x"
   }
 }

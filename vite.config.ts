@@ -8,7 +8,7 @@ export default defineConfig({
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
             name: 'vue-content-placeholders',
-            fileName: (format) => `${ format }.js`
+            fileName: (format) => `vue-content-placeholders.${ format }.js`
         },
 
         rollupOptions: {

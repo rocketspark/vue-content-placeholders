@@ -1,0 +1,44 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+sort-direction: descending
+exclude-labels:
+  - 'skip-changelog'
+  - 'release'
+categories:
+  - title: '🚨 Breaking changes'
+    labels:
+      - 'breaking change'
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+      - 'patch'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'bugfix'
+  - title: '🔧 Maintenance'
+    labels:
+      - 'chore'
+      - 'housekeeping'
+      - 'refactor'
+      - 'documentation'
+version-resolver:
+  major:
+    labels:
+      - 'major'
+      - 'breaking change'
+  minor:
+    labels:
+      - 'enhancement'
+      - 'minor'
+  patch:
+    labels:
+      - 'bugfix'
+      - 'patch'
+  default: patch
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+template: |
+  # Changes
+  $CHANGES
+  # Contributors
+  $CONTRIBUTORS
