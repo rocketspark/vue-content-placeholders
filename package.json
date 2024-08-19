@@ -1,5 +1,6 @@
 {
   "name": "@rocketspark/vue-content-placeholders",
+  "author": "Lee @ Rocketspark",
   "version": "0.1.0",
   "scripts": {
     "dev": "vite",
