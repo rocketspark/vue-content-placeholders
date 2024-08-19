@@ -1,23 +1,24 @@
 {
   "name": "@rocketspark/vue-content-placeholders",
   "version": "0.0.0",
-  "main": "dist/vue-content-placeholders.umd.js",
-  "module": "dist/vue-content-placeholders.es.js",
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "exports": {
-    ".": {
-      "import": "./dist/vue-content-placeholders.es.js",
-      "require": "./dist/vue-content-placeholders.umd.js"
-    },
-    "./dist/styles.css": "./dist/styles.css"
+    ".": "./dist/index.js",
+    "./styles.css": "./dist/style.css"
   },
+  "browser": {
+    "./styles.css": "./dist/style.css"
+  },
+  "types": "dist/ViewerPlugin.d.ts",
   "dependencies": {
-    "vue": "^3.4.35"
+    "vue": "3.x"
   },
   "files": [
     "dist"
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@types/node": "^22.2.0",
     "@vitejs/plugin-vue": "^5.1.2",
+    "rollup-plugin-typescript2": "^0.36.0",
     "sass": "^1.77.8",
     "typescript": "^5.5.3",
     "vite": "^5.4.0",
