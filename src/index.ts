@@ -1,8 +1,5 @@
 import type { App } from "vue";
-import ContentPlaceholders from './components/ContentPlaceholders.vue'
-import ContentPlaceholdersHeading from './components/ContentPlaceholdersHeading.vue'
-import ContentPlaceholdersImg from './components/ContentPlaceholdersImg.vue'
-import ContentPlaceholdersText from './components/ContentPlaceholdersText.vue'
+import { ContentPlaceholders, ContentPlaceholdersHeading, ContentPlaceholdersImg, ContentPlaceholdersText } from './components';
 
 export default {
     install: (app: App,) => {
@@ -12,3 +9,10 @@ export default {
         app.component('ContentPlaceholdersText', ContentPlaceholdersText)
     },
 };
+
+export {
+    ContentPlaceholders,
+    ContentPlaceholdersHeading,
+    ContentPlaceholdersImg,
+    ContentPlaceholdersText
+}
