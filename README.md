@@ -11,6 +11,7 @@
 
 ## :cd: Installation
 
+* via bun: `bun add @rocketspark/vue-content-placeholders`
 * via npm: `npm install @rocketspark/vue-content-placeholders --save`
 * via yarn: `yarn add @rocketspark/vue-content-placeholders`
 

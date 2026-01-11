@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue-demi'
 import VueApp from './App.vue'
 import VueContentPlaceholderPlugin from './index'
 

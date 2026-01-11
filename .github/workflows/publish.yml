@@ -10,14 +10,14 @@ jobs:
     env:
       NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20.x
+          bun-version: latest
       - run: |
           npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-          npm ci
-#      - run: npm run test
+          bun install --frozen-lockfile
+#      - run: bun run test
       - name: Setup GIT
         run: |
           git reset --hard
@@ -32,7 +32,7 @@ jobs:
         run: |
           git reset --hard
           npm --no-git-tag-version version ${{ github.event.release.tag_name }}
-          npm run build
+          bun run build
           git add . || true
           git commit -m "Build update [skip actions]" || true
           git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"

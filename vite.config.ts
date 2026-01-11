@@ -16,10 +16,11 @@ export default defineConfig({
         },
 
         rollupOptions: {
-            external: [ "vue" ],
+            external: ["vue", "vue-demi"],
             output: {
                 globals: {
                     vue: "Vue",
+                    "vue-demi": "VueDemi",
                 }
             }
         },
@@ -44,4 +45,14 @@ export default defineConfig({
             },
         }),
     ],
+    optimizeDeps: {
+        exclude: ['vue-demi'],
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern',
+            },
+        },
+    },
 })

@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed } from "vue-demi";
 
 const props = defineProps({
     rounded: {
@@ -33,5 +33,5 @@ const classObject = computed(() => {
 </script>
 
 <style lang="scss">
-@import '../styles.scss';
+@use '../styles.scss' as *;
 </style>
